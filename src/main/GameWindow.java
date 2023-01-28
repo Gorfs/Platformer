@@ -14,7 +14,7 @@ public class GameWindow {
         // spawn the game window in the center of the screen
         jframe.setLocationRelativeTo(null);
         
-        jframe.setResizable(false );
+        jframe.setResizable(false);
         jframe.pack();
 
         // this needs to be at the end of the method
