@@ -26,23 +26,23 @@ public class KeyboardInputs implements KeyListener {
 //        System.out.println("a key was released");
         switch (keyEvent.getKeyCode()){
             case KeyEvent.VK_A -> {
-                System.out.println("left");
-                gamePanel.changeXDelta(-10);
+                gamePanel.changeXDelta(-10.0f);
+//                System.out.println("left");
                 break;
             }
             case KeyEvent.VK_W -> {
-                gamePanel.changeYDelta(-10);
-                System.out.println("up");
+                gamePanel.changeYDelta(-10.0f);
+//                System.out.println("up");
                 break;
             }
             case KeyEvent.VK_S -> {
-                System.out.println("Down");
-                gamePanel.changeYDelta(10);
+                gamePanel.changeYDelta(10.0f);
+//                System.out.println("Down");
                 break;
             }
             case KeyEvent.VK_D -> {
-                System.out.println("Right");
-                gamePanel.changeXDelta(10);
+                gamePanel.changeXDelta(10.0f);
+//                System.out.println("Right");
                 break;
             }
         }

@@ -8,14 +8,18 @@ public class GameWindow {
     public GameWindow(GamePanel gamePanel){
         jframe = new JFrame();
 
-        jframe.setSize(400,400);
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframe.add(gamePanel);
 
         // spawn the game window in the center of the screen
         jframe.setLocationRelativeTo(null);
+        
+        jframe.setResizable(false );
+        jframe.pack();
 
         // this needs to be at the end of the method
         jframe.setVisible(true);
     }
 }
+
+
