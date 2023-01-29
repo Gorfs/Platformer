@@ -16,7 +16,7 @@ import static utilz.Constants.Directions.*;
 
 public class GamePanel extends JPanel {
     private MouseInputs mouseInputs;
-    private int aniTick, aniIndex, aniSpeed = 15 ;
+    private int aniTick, aniIndex, aniSpeed = 20 ;
     private BufferedImage img;
     private BufferedImage[][] animations;
     float xDelta = 0.0f;
@@ -116,12 +116,15 @@ public class GamePanel extends JPanel {
     }
     }
 
+    public void updateGame(){
+        updateAnimationTick();
+        setAnimation();
+        updatePos();
+    }
+
     public void paintComponent(Graphics g){
         super.paintComponent(g);
-        updateAnimationTick();
-        updatePos();
 
-        setAnimation();
         g.drawImage(animations[playerAction][aniIndex], (int)(xDelta), (int)(yDelta),256, 160, null);
     }
 
